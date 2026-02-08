@@ -15,4 +15,168 @@
 @import url('./vite-promo.css');
 @import url('./badges.css');
 @import url('./back-link.css');
-@import url('./footer.css');
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+.flatpickr-seconds,
+.flatpickr-am-pm {
+  display: none;
+}
+
+/* Блок часу під календарем  */
+.flatpickr-time {
+  border-top: none;
+  margin-top: 6px;
+}
+
+/* час */
+#time-display {
+  display: none;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 6px;
+  font-family: monospace;
+  color: #333;
+}
+
+/* Таймер  */
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.timer .field {
+  text-align: center;
+  font-family: monospace;
+}
+
+.timer .value {
+  font-size: 24px;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Інпут */
+#datetime-picker {
+  width: 240px;
+  height: 44px;
+  padding: 0 12px;
+
+  font-size: 16px;
+  font-family: inherit;
+
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+
+  background-color: #ffffff;
+  color: #212121;
+}
+
+#datetime-picker:focus {
+  outline: none;
+  border-color: #7a7a7a;
+}
+
+/* Кнопка */
+button[data-start] {
+  width: 100px;
+  height: 44px;
+
+  font-size: 16px;
+  font-family: inherit;
+
+  border-radius: 4px;
+  border: none;
+
+  background-color: #cfcfcf;
+  color: #ffffff;
+
+  transition: background-color 0.25s ease;
+}
+
+/* Активна кнопка */
+button[data-start]:not(:disabled) {
+  background-color: #7a7a7a;
+  cursor: pointer;
+}
+
+.back-link {
+  margin-bottom: 20px;
+}
+
+.form {
+  width: 280px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Загальні поля */
+.form-field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Label над input */
+.form-label {
+  font-size: 14px;
+  color: #212121;
+}
+
+/* Input */
+.form input[type='number'] {
+  width: 100%;
+  height: 44px;
+  padding: 0 12px;
+
+  font-size: 16px;
+
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+}
+
+/* Fieldset (State) */
+fieldset {
+  width: 100%;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  padding: 10px 12px;
+  margin: 0;
+}
+
+/* Radio group */
+.radio-group {
+  display: flex;
+  gap: 16px;
+}
+
+/* Кнопка */
+button[type='submit'] {
+  width: 100%;
+  height: 36px; /* нижча за input */
+
+  border: none;
+  border-radius: 4px;
+
+  background-color: #cfcfcf;
+  color: #fff;
+
+  font-size: 16px;
+  cursor: pointer;
+}
